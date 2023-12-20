@@ -21,10 +21,10 @@
     "github-actions",
     "serveless",
     "sql",
-    "javascript"
+    "javascript"    
   ],
   "author": "Felipe Cordeiro",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
@@ -36,6 +36,6 @@
     "eslint-friendly-formatter": "^4.0.1",
     "express": "^4.18.2",
     "express-promise-router": "^4.1.1",
-    "mysql": "^2.18.1"
+    "pg": "^8.11.3"
   }
 }
