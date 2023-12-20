@@ -24,7 +24,7 @@
     "javascript"    
   ],
   "author": "Felipe Cordeiro",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
