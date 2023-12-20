@@ -23,7 +23,7 @@
     "sql",
     "javascript"    
   ],
-  "author": "Felipe Cordeiro",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.56.0",

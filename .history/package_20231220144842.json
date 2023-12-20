@@ -13,17 +13,8 @@
     "type": "git",
     "url": "https://github.com/Felipecordeiiro/funcionario-crud-api.git"
   },
-  "keywords": [
-    "nodejs",
-    "api",
-    "crud",
-    "express",
-    "github-actions",
-    "serveless",
-    "sql",
-    "javascript"    
-  ],
-  "author": "Felipe Cordeiro",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.56.0",
