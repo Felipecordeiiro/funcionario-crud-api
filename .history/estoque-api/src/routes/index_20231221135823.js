@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express')
 
 const router = express.Router();
 
@@ -9,5 +9,3 @@ router.get('/api', (req, res) => {
     version:'1.0.0'
   })
 })
-
-module.exports = router;

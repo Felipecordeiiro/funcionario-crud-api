@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express()
 
 // ===> Rotas da API (estoque)
-const index = require('./routes/index.js');
+const index = require('./routes/index.sj');
 //const estoqueRoute = require('./routes/estoque.routes');
 
 app.use(express.urlencoded({ extended: true }));

@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require('express')
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/api', (req, res) => {
   res.status(200).send({
@@ -9,5 +9,3 @@ router.get('/api', (req, res) => {
     version:'1.0.0'
   })
 })
-
-module.exports = router;
