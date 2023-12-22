@@ -1,21 +1,34 @@
 const db = require('../config/database');
 
-// método responsável por add um novo produto;
-exports.createUser = async(req, res) =>{
-  const { userId, userName, email, password } = req.body;
+exports.listEstoque = async (req, res) => {
+  try {
+    const { rows } = await db.query("SELECT * FROM estoque");
+    res.status(200).send(rows)
+  } catch (error) {
+    console.error('listEstoque', error);
+    res.status(500).send({
+      message: "Ocorreu um erro"
+    });
+  }
+}
+
+exports.addItem = async (req, res) => {
+  const { itemId, quantity, groupe, description, cpf, warehouse, comment } = req.body;
+  // CPF, C -> Consumível, P -> Peça, F -> Ferramenta
+  const columns = [quantity, groupe, description, cpf, warehouse, comment]
   try {
     const { rows } = await db.query(
-      "INSERT INTO estoque (userName, email, password) VALUES (?, ?, ?)",
-      [userName, email, password]
+      "INSERT INTO estoque (quantity, groupe, description, cpf, warehouse, comment) VALUES (?, ?, ?, ?, ?, ?)",
+      columns
     );
-    console.log("Inserção bem-sucedida:", rows);
+    console.log("Inserção bem-sucedida:", columns);
   } catch (error) {
-    console.error("Erro na inserção:", error);
+    console.log(error)
   }
   res.status(201).send({
-    message: 'Conta criada com sucesso!',
+    message: 'Item adicionado ao banco de dados!',
     body: {
-      funcionario: { userId, userName, email, password }
+      item: { itemId, quantity, groupe, description, cpf, warehouse, comment }
     },
   })
 }
