@@ -1,6 +1,3 @@
-/*
-Adicionar outras tabelas para referenciar o tipo de objeto do estoque: parafusos, teclados, chapas e etc. 
-*/
 CREATE TABLE funcionario (
   userId int(5) NOT NULL AUTO_INCREMET,
   userName varchar(240) NOT NULL,
@@ -9,12 +6,10 @@ CREATE TABLE funcionario (
 )
 
 CREATE TABLE `test`.`estoque` (
-  `itemId` INT(5) NOT NULL AUTO_INCREMENT , 
+  `itemId` INT NOT NULL AUTO_INCREMENT , 
   `quantity` INT(10) NOT NULL , 
-  `groupe` VARCHAR(100) NOT NULL , 
+  `group` VARCHAR(100) NOT NULL , 
   `description` TEXT NOT NULL , 
   `cpf` VARCHAR(100) NOT NULL , 
   `warehouse` VARCHAR(100) NOT NULL , 
-  `comment` TEXT NOT NULL, 
-  PRIMARY KEY (`itemId`)
-) ENGINE = MyISAM;
+  `comment` TEXT NOT NULL , PRIMARY KEY (`itemId`)) ENGINE = MyISAM;

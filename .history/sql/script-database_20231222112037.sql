@@ -2,11 +2,11 @@
 Adicionar outras tabelas para referenciar o tipo de objeto do estoque: parafusos, teclados, chapas e etc. 
 */
 CREATE TABLE funcionario (
-  userId int(5) NOT NULL AUTO_INCREMET,
-  userName varchar(240) NOT NULL,
-  email varchar(240) NOT NULL,
-  password varchar(10) NOT NULL,
-)
+  `userId` int(5) NOT NULL AUTO_INCREMET,
+  `userName` varchar(240) NOT NULL,
+  `email` varchar(240) NOT NULL,
+  `password` varchar(10) NOT NULL,
+) ENGINE = MyISAM;
 
 CREATE TABLE `test`.`estoque` (
   `itemId` INT(5) NOT NULL AUTO_INCREMENT , 

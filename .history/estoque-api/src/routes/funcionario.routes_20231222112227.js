@@ -1,0 +1,9 @@
+const router = require('express-promise-router')();
+const funcController = require('../');
+
+// ===> Definindo as rotas do CRUD - Estoque
+
+// ===> Rota responsável para criar um novo funcionário: (POST): localhost:3000/api/funcionarios
+router.post('/funcionarios', funcController.createUser);
+
+module.exports = router;
